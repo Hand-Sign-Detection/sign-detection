@@ -57,7 +57,7 @@ while True:
             # Drawing landmarks on frames
             mpDraw.draw_landmarks(frame, handslms, mpHands.HAND_CONNECTIONS)
 
-            # Predict gesture
+            # Predict gesture using the dataset
             prediction = model.predict([landmarks])
             # print(prediction)
             classID = np.argmax(prediction)
